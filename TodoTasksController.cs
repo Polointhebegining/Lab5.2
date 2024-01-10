@@ -1,4 +1,6 @@
+//я не знаю как удалит ьэтот файл с гитхаба, но  он не нужен тут
 
+/* 
 using Microsoft.AspNetCore.Mvc;
 using Lab2;
 using System.Collections.Generic;
@@ -59,3 +61,4 @@ public class TodoTasksController : ControllerBase
         return NoContent();
     }
 }
+*/
