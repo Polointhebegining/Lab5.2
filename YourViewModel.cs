@@ -40,7 +40,7 @@ public class YourViewModel : INotifyPropertyChanged
         NewTaskCommand = new RelayCommand(CreateNewTask);
     }
 
-    private void EditTask(object parameter)
+    private void EditTask()
     {
         if (SelectedTask != null)
         {
@@ -58,7 +58,7 @@ public class YourViewModel : INotifyPropertyChanged
         }
     }
 
-    private void CreateNewTask(object parameter)
+    private void CreateNewTask()
     {
         var newTaskWindow = new TaskDialogWindow();
         var result = newTaskWindow.ShowDialog();
