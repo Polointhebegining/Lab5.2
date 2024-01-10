@@ -3,6 +3,8 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Windows;
 using System.Windows.Input;
+using GalaSoft.MvvmLight.Command;
+
 public class YourViewModel : INotifyPropertyChanged
 {
     public event PropertyChangedEventHandler PropertyChanged;
@@ -43,12 +45,12 @@ public class YourViewModel : INotifyPropertyChanged
         if (SelectedTask != null)
         {
             var editWindow = new TaskDialogWindow();
-            editWindow.DataContext = SelectedTask.Clone(); // Тут нужно  клонирование для избежания изменений в оригинале
+            editWindow.DataContext = SelectedTask.Clone(); // Г’ГіГІ Г­ГіГ¦Г­Г®  ГЄГ«Г®Г­ГЁГ°Г®ГўГ Г­ГЁГҐ Г¤Г«Гї ГЁГ§ГЎГҐГ¦Г Г­ГЁГї ГЁГ§Г¬ГҐГ­ГҐГ­ГЁГ© Гў Г®Г°ГЁГЈГЁГ­Г Г«ГҐ
             var result = editWindow.ShowDialog();
 
             if (result == true)
             {
-                // Тут обновляем TodoList и соответствующий объект TodoTask
+                // Г’ГіГІ Г®ГЎГ­Г®ГўГ«ГїГҐГ¬ TodoList ГЁ Г±Г®Г®ГІГўГҐГІГ±ГІГўГіГѕГ№ГЁГ© Г®ГЎГєГҐГЄГІ TodoTask
                 int index = TodoList.IndexOf(SelectedTask);
                 TodoList[index] = (TodoTask)editWindow.DataContext;
                 OnPropertyChanged(nameof(TodoList));
