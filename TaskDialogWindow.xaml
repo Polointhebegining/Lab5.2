@@ -1,0 +1,13 @@
+<Window x:Class="TaskDialogWindow"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="TaskDialogWindow" Height="200" Width="200">
+    <Grid>
+        <TextBox x:Name="TitleTextBox"  />
+        <TextBox x:Name="DescriptionTextBox"  />
+        <!-- Other input fields -->
+        <Button Content="OK" Click="OkButton_Click"  />
+        <Button Content="Cancel" Click="CancelButton_Click"  />
+    </Grid>
+</Window>
+

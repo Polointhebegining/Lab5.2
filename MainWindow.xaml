@@ -1,0 +1,24 @@
+﻿<Window x:Class="MainWindow"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ListView ItemsSource="{Binding TodoList}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <!-- Define the visual representation of a task here 
+-->
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <ListView.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Edit Task" Command="{Binding 
+EditTaskCommand}" />
+                    <MenuItem Header="New Task" Command="{Binding 
+NewTaskCommand}" />
+                </ContextMenu>
+            </ListView.ContextMenu>
+        </ListView>
+    </Grid>
+</Window>
+
